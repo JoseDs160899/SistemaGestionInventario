@@ -113,3 +113,4 @@ Este proyecto se desarrolla con fines académicos. La licencia definitiva se est
 
 **Sistema de Gestión de Inventario**  
 Proyecto de desarrollo de software.
+Ultimos cambios
