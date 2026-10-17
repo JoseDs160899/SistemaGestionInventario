@@ -23,28 +23,21 @@ Sistema de Gestión de Inventario es una aplicación diseñada para administrar 
 
 ## 🛠️ Tecnologías utilizadas
 
-> Ejemplo de tecnologías. Modifica esta sección según las herramientas que realmente utilice el proyecto.
-
-- Lenguaje: Java
-- Base de datos: MySQL
-- Control de versiones: Git
-- Repositorio: GitHub
+- Java 21
+- Spring Boot 3.5
+- Maven
+- MySQL
 
 ## 📂 Estructura del proyecto
 
 ```text
 SistemaGestionInventario/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-├── docs/
-├── .gitignore
+├── src/main/java/com/sistemagestioninventario/
+├── src/main/resources/application.properties
+├── src/test/java/com/sistemagestioninventario/
+├── pom.xml
 └── README.md
 ```
-
-*La estructura es referencial y puede cambiar según la arquitectura del proyecto.*
 
 ## 🚀 Instalación y ejecución
 
@@ -60,18 +53,20 @@ git clone <URL_DEL_REPOSITORIO>
 cd SistemaGestionInventario
 ```
 
-### 3. Configurar la base de datos
+### 3. Configurar la conexión a MySQL
 
-- Instalar MySQL.
-- Crear la base de datos del sistema.
-- Configurar las credenciales de conexión en el archivo de configuración correspondiente.
-- Ejecutar los scripts SQL necesarios, si existen.
+La aplicación usa por defecto la base de datos `sistema_inventario` en `localhost:3306`, con el usuario `root` y contraseña vacía. Puedes personalizar la conexión mediante estas variables de entorno:
 
-### 4. Ejecutar la aplicación
+- `DB_URL`: URL JDBC de MySQL.
+- `DB_USERNAME`: usuario de MySQL.
+- `DB_PASSWORD`: contraseña de MySQL.
 
-Abre el proyecto en tu IDE y ejecuta la clase principal.
+### 4. Ejecutar y probar
 
-> Los pasos exactos dependerán de las tecnologías y herramientas utilizadas.
+```bash
+mvn spring-boot:run
+mvn test
+```
 
 ## 👥 Equipo de desarrollo
 
