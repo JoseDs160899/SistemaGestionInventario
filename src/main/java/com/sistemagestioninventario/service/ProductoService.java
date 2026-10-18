@@ -84,7 +84,7 @@ public class ProductoService {
     }
 
     @Transactional(readOnly = true)
-	public List<Producto> listarStockBajo() {
-    	return productoRepository.findProductosConStockBajo();
+    public List<Producto> listarStockBajo() {
+        return productoRepository.findProductosConStockBajo();
     }
 }
