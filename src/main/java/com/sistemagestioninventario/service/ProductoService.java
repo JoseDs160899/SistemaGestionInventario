@@ -84,11 +84,7 @@ public class ProductoService {
     }
 
     @Transactional(readOnly = true)
-    public List<Producto> listarStockBajo() {
-        return productoRepository.findByStockLessThanEqual(
-                Integer.MAX_VALUE
-        ).stream()
-         .filter(p -> p.getStock() <= p.getStockMinimo())
-         .toList();
+	public List<Producto> listarStockBajo() {
+    	return productoRepository.findProductosConStockBajo();
     }
 }
